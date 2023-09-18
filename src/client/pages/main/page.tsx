@@ -80,7 +80,7 @@ export const IndexPage: React.FC = () => {
               return;
             }
             setList((prev) => {
-              prev[index] = res.allDirectory;
+              prev[index] = res;
               return [...prev];
             });
           });
@@ -98,7 +98,7 @@ export const IndexPage: React.FC = () => {
           <SearchTree
             draggable={{ icon: false }}
             showLine
-            treeData={item.allDirectory}
+            treeData={item.allDirectory || []}
             onDrop={onDrop.bind(this, index)}
             titleRender={renderTreeItem}
           />

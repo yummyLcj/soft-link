@@ -874,6 +874,19 @@ soft-link@^1.0.0:
     tslib "^2.6.2"
     typescript "^5.2.2"
 
+soft-link@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/soft-link/-/soft-link-1.0.1.tgz#3681cd8e2c4e6b0e970c604521e008d23573d6aa"
+  integrity sha512-/t4rk5+UZby/KzRVDkYqRfkI3BTvNCFfGjrJm5VZd/EX0+yz8yHXy24V8vVwyp3Pg/jahxMD+qX1xX8yiTMXaw==
+  dependencies:
+    chalk "^4.0.0"
+    commander "^11.0.0"
+    debug "^4.3.4"
+    soft-link "^1.0.0"
+    tsconfig-paths "^4.2.0"
+    tslib "^2.6.2"
+    typescript "^5.2.2"
+
 spawn-command@0.0.2:
   version "0.0.2"
   resolved "https://registry.npmmirror.com/spawn-command/-/spawn-command-0.0.2.tgz#9544e1a43ca045f8531aac1a48cb29bdae62338e"

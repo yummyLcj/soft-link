@@ -1,10 +1,10 @@
 {
   "name": "soft-link",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "soft link target to link and support gui",
   "main": "index.js",
   "bin": {
-    "softlink": "dist/cli/softlink"
+    "softlink": "./softlink.js"
   },
   "scripts": {
     "clean": "rm -rf dist/",
@@ -14,6 +14,12 @@
     "dev": "yarn clean && yarn link:static && concurrently -n cli,fe \"yarn dev:cli\" \"yarn dev:fe\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "src",
+    "package.json",
+    "softlink.js",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yummyLcj/soft-link.git"
@@ -31,7 +37,7 @@
     "chalk": "^4.0.0",
     "commander": "^11.0.0",
     "debug": "^4.3.4",
-    "soft-link": "^1.0.0",
+    "soft-link": "^1.0.1",
     "tsconfig-paths": "^4.2.0",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"

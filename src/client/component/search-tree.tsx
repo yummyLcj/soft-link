@@ -36,7 +36,10 @@ export const SearchTree: React.FC<TreeProps> = ({ treeData, ...props }: any) => 
   const [searchValue, setSearchValue] = useState('');
   const [autoExpandParent, setAutoExpandParent] = useState(true);
 
-  const flatedTreeData = useMemo(() => flatTreeData(treeData), [treeData]);
+  const flatedTreeData = useMemo(() => {
+    console.log('treeData', treeData);
+    return flatTreeData(treeData);
+  }, [treeData]);
 
   const onExpand = (newExpandedKeys: React.Key[]) => {
     setExpandedKeys(newExpandedKeys);
@@ -88,7 +91,7 @@ export const SearchTree: React.FC<TreeProps> = ({ treeData, ...props }: any) => 
       });
 
     return loop(treeData);
-  }, [searchValue]);
+  }, [treeData, searchValue]);
 
   return (
     <div>
