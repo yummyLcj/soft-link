@@ -862,6 +862,18 @@ shell-quote@^1.8.1:
   resolved "https://registry.npmmirror.com/shell-quote/-/shell-quote-1.8.1.tgz#6dbf4db75515ad5bac63b4f1894c3a154c766680"
   integrity sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==
 
+soft-link@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/soft-link/-/soft-link-1.0.0.tgz#39e695e305fb9659a8d143f256e9eae349d0489b"
+  integrity sha512-uqJvhgqnCBqsJWqmflBonrTM02CMofpGz/rTCm3uyn9CNO/myyjiszbquTcPu5yghI6CwPWnko/YDLu7hkk7IQ==
+  dependencies:
+    chalk "^4.0.0"
+    commander "^11.0.0"
+    debug "^4.3.4"
+    tsconfig-paths "^4.2.0"
+    tslib "^2.6.2"
+    typescript "^5.2.2"
+
 spawn-command@0.0.2:
   version "0.0.2"
   resolved "https://registry.npmmirror.com/spawn-command/-/spawn-command-0.0.2.tgz#9544e1a43ca045f8531aac1a48cb29bdae62338e"

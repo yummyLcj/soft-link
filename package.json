@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "soft link target to link and support gui",
   "main": "index.js",
-  "bin": "dist/cli/softlink",
+  "bin": {
+    "softlink": "dist/cli/softlink"
+  },
   "scripts": {
     "clean": "rm -rf dist/",
     "link:static": "mkdir -p ./dist/client && ln -s ${PWD}/src/client/index.html ${PWD}/dist/client/index.html && ln -s ${PWD}/src/client/index.css ${PWD}/dist/client/index.css && ln -s ${PWD}/src/client/reset.css ${PWD}/dist/client/reset.css",
@@ -29,6 +31,7 @@
     "chalk": "^4.0.0",
     "commander": "^11.0.0",
     "debug": "^4.3.4",
+    "soft-link": "^1.0.0",
     "tsconfig-paths": "^4.2.0",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
