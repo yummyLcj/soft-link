@@ -1,6 +1,6 @@
 {
   "name": "soft-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "soft link target to link and support gui",
   "main": "index.js",
   "bin": {
