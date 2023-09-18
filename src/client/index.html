@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>软链来了</title>
+    <style>
+        #app {
+            min-height: 100%;
+        }
+
+        .loading {
+            position: absolute;
+            width: 120px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            animation: heart infinite 1s linear;
+        }
+
+        .loading p {
+            position: absolute;
+            font-size: 28px;
+            line-height: 28px;
+            top: -70px;
+            left: 10px;
+            color: rgba(0, 0, 0, .45);
+        }
+
+        .loading:before,
+        .loading:after {
+            position: absolute;
+            top: 0;
+            left: 60px;
+            width: 60px;
+            height: 100px;
+            content: "";
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+            border-radius: 30px 30px 0 0;
+            background: #f01c22;
+        }
+
+        .loading:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        @keyframes heart {
+            0% {
+                transform: scale(0.8);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0.8);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="reset.css"/>
+</head>
+<body>
+<div id="app">
+    <div class="loading"><p>loading...</p></div>
+</div>
+<script type="importmap">
+  {
+    "imports": {
+      "antd": "https://esm.sh/antd@5.9.1?bundle&dev",
+      "antd/locale/zh_CN": "https://esm.sh/antd@5.9.1/locale/zh_CN?bundle",
+      "react": "https://esm.sh/react@18.2.0?dev",
+      "react-router-dom": "https://esm.sh/react-router-dom@18.2.0?dev",
+      "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
+      "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev"
+    },
+    "scopes": {
+        "/react": {
+            "react": "https://esm.sh/react@18.2.0?dev",
+            "react-router-dom": "https://esm.sh/react-router-dom@18.2.0?dev",
+            "react-dom": "https://esm.sh/react-dom@18.2.0?dev"
+        }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script type="module" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "./tsconfig.json"
+  ],
+  "compilerOptions": {
+    "module": "es6",
+    "resolveJsonModule": false,
+    "lib": ["DOM"],
+    "jsx": "react"
+  },
+  "include": [
+    "src/client/**/*.ts*"
+  ],
+  "exclude": [
+    "src/**/*.js",
+    "node_modules"
+  ]
+}

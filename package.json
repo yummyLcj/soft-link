@@ -1,0 +1,46 @@
+{
+  "name": "soft-link",
+  "version": "1.0.0",
+  "description": "soft link target to link and support gui",
+  "main": "index.js",
+  "bin": "dist/cli/softlink",
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "link:static": "mkdir -p ./dist/client && ln -s ${PWD}/src/client/index.html ${PWD}/dist/client/index.html && ln -s ${PWD}/src/client/index.css ${PWD}/dist/client/index.css && ln -s ${PWD}/src/client/reset.css ${PWD}/dist/client/reset.css",
+    "dev:cli": "tsc -p tsconfig.cli.json -w",
+    "dev:fe": "tsc -p tsconfig.fe.json -w",
+    "dev": "yarn clean && yarn link:static && concurrently -n cli,fe \"yarn dev:cli\" \"yarn dev:fe\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yummyLcj/soft-link.git"
+  },
+  "keywords": [
+    "softlink"
+  ],
+  "author": "chenjieLu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yummyLcj/soft-link/issues"
+  },
+  "homepage": "https://github.com/yummyLcj/soft-link#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^11.0.0",
+    "debug": "^4.3.4",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.8",
+    "@types/node": "^20.6.1",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "@types/react-router-dom": "5.3.3",
+    "antd": "5.9.1",
+    "concurrently": "^8.2.1",
+    "prettier": "^3.0.3"
+  }
+}
